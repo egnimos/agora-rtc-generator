@@ -21,6 +21,7 @@ type InitEnvInterface interface {
 	GetEnvScope() (string, error)
 	GetAppId() (string, error)
 	GetAppCert() (string, error)
+	GetServerPort() (string, error)
 }
 
 // Reads a secret from files from the docker and other container based services
@@ -91,6 +92,19 @@ func (ie *initenv) GetAppCert() (string, error) {
 
 	if len(key) == 0 {
 		return appCert(), nil
+	} else {
+		return key, nil
+	}
+}
+
+func (ie *initenv) GetServerPort() (string, error) {
+	key, err := read(portFile())
+	if err != nil {
+		return "", err
+	}
+
+	if len(key) == 0 {
+		return port(), nil
 	} else {
 		return key, nil
 	}

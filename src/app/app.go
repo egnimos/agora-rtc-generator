@@ -41,10 +41,13 @@ func StartApp() {
 		panic(err)
 	}
 
+	port, _ := app_env.InitEnv.GetServerPort()
+	fmt.Println("server port:: ", port)
+
 	//define routers
 	mapurl()
 
-	if err := router.Run(":8080"); err != nil {
+	if err := router.Run(fmt.Sprintf(":%s", port)); err != nil {
 		panic(err)
 	}
 }

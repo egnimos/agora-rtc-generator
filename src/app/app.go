@@ -8,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-var router = *gin.Default()
+var router *gin.Engine
 
 func loadLocal() string {
 	//get the local env
@@ -23,6 +23,7 @@ func loadLocal() string {
 }
 
 func init() {
+	router = gin.Default()
 	scope, err := app_env.InitEnv.GetEnvScope()
 	if err != nil {
 		app_env.InitEnv.LoadEnvFile(loadLocal)

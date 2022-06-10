@@ -1,3 +1,5 @@
+github.com/AgoraIO-Community/go-tokenbuilder v1.0.0 h1:R6L8a5u+p1qGpY5lNyQ19vRyDzIwhhqQnRlg9AAbqmA=
+github.com/AgoraIO-Community/go-tokenbuilder v1.0.0/go.mod h1:xqPdaiFG00M1hNN/CCYh8j+NTmkiJsQtqYdf4YAlncA=
 github.com/RBucket-Org/RB-Utils v0.0.0-20220526082320-ac058c769ff9 h1:nj/zL9dVyokUhteXqlOg//K6+t1ynDiUfwWxIYCDfu0=
 github.com/RBucket-Org/RB-Utils v0.0.0-20220526082320-ac058c769ff9/go.mod h1:SFpzW77UgG/D5pv2IXPbWudKenm92jDO9sDAClwVFu0=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=

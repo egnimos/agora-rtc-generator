@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  rtc:
+    image: egnimos/rtc-generator:1.0.0
+    # container_name: rb_post
+    ports:
+      - 9090:8080
+    environment:
+      - ENV_SCOPE=DOCKER
+      - PORT=8080
+      - APP_ID="f3fcfcfcc63b4e50ad702ea2e9ec37f5"
+      - APP_CERT="610d46a053ca4132a405eccf82bc1289"
+    restart: on-failure
